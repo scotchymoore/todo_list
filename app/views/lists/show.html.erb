@@ -1,0 +1,17 @@
+<h1>Scott's Todo List</h1>
+<hr />
+
+<h1><%=@list.task %>
+
+  <blockquote>
+    <%= @list.description %>
+  </blockquote>
+
+
+  <i>
+    Posted At: <%= @list.created_at %>
+  </i>
+
+
+<br />
+  <%= link_to 'All Ports', lists_path %>

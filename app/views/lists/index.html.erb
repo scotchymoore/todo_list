@@ -1,0 +1,23 @@
+<h1>Scott's TODO LIST</h1>
+<hr />
+
+<hr />
+
+<%= link_to 'Create New Task', new_list_path %>
+
+<% if @lists.empty? %>
+  <h3>No blog Posts found, Please create one!</3>
+    <%else %>
+    <ul>
+      <% @lists.each do |list| %>
+      <li>
+      <strong><%= link_to(list.task, list_path(list)) %></strong>
+        <span> - </span>
+        <%= link_to'Edit', edit_list_path(list)%>
+        <span> - <span>
+          <%= link_to 'Delete', list_path(list), method: :delete%>
+
+      </li>
+      <% end %>
+</ul>
+  <% end  %>
